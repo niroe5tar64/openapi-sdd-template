@@ -1,0 +1,23 @@
+# src/components/schemas.yaml
+
+# Schema Values
+IDValue:
+  description: DB Table の主キーに対応
+  type: integer
+  example: 1234567890
+CreatedAtValue:
+  description: 作成日時 (UNIXタイムスタンプ)
+  type: string
+  example: "2023-12-24 00:00:00"
+UpdatedAtValue:
+  description: 更新日時 (UNIXタイムスタンプ)
+  type: string
+  example: "2023-12-24 00:00:00"
+
+# Schema Objects
+SampleObject:
+  $ref: "./schemas/sample.yaml#/SampleObject"
+
+# Meta Info Objects
+PaginationMetaObject:
+  $ref: "./schemas/meta.yaml#/PaginationMetaObject"

@@ -1,0 +1,21 @@
+# src/components/responses.yaml
+
+# Sample Response
+SampleResponse:
+  $ref: "./responses/swagger_sample_response.yaml#/SampleResponse"
+SampleListResponse:
+  $ref: "./responses/swagger_sample_response.yaml#/SampleListResponse"
+SampleCreationResponse:
+  $ref: "./responses/swagger_sample_response.yaml#/SampleCreationResponse"
+SampleEditingResponse:
+  $ref: "./responses/swagger_sample_response.yaml#/SampleEditingResponse"
+SampleDeleteResponse:
+  $ref: "./responses/swagger_sample_response.yaml#/SampleDeleteResponse"
+SampleFlagOnResponse:
+  $ref: "./responses/swagger_sample_response.yaml#/SampleFlagOnResponse"
+
+# Error Response
+404_not_found:
+  $ref: "./responses/404.yaml"
+500_internal_server_error:
+  $ref: "./responses/500.yaml"

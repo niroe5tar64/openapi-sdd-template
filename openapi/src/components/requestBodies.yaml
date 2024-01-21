@@ -1,0 +1,5 @@
+# src/components/requestBodies.yaml
+SampleCreationRequest:
+  $ref: "./requestBodies/swagger_sample_requests.yaml#/SampleCreationRequest"
+SampleEditingRequest:
+  $ref: "./requestBodies/swagger_sample_requests.yaml#/SampleEditingRequest"

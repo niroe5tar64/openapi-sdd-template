@@ -1,0 +1,15 @@
+# src/components/parameters.yaml
+
+# PaginationValues
+RequiredQueryPageIndex:
+  $ref: "./parameters/pagination.yaml#/RequiredQueryPageIndex"
+OptionalQueryMaxPerPage:
+  $ref: "./parameters/pagination.yaml#/OptionalQueryMaxPerPage"
+
+RequiredPathId:
+  in: path
+  name: id
+  description: 対象データの識別ID
+  required: true
+  schema:
+    $ref: "../components/schemas.yaml#/IDValue"

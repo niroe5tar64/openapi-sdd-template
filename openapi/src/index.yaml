@@ -1,0 +1,30 @@
+---
+openapi: 3.0.1
+info:
+  title: Sample API Specification
+  version: v1
+servers:
+  - url: https://{defaultHost}
+    variables:
+      defaultHost:
+        default: localhost:3000
+tags:
+  - name: /swagger/sample/*
+    description: SwaggerSample関連
+paths:
+  /swagger/sample:
+    $ref: "./paths.yaml#/swagger_sample"
+  /swagger/sample/{id}:
+    $ref: "./paths.yaml#/swagger_sample_{id}"
+  /swagger/sample/{id}/flag_on:
+    $ref: "./paths.yaml#/swagger_sample_{id}_flag_on"
+
+components:
+  parameters:
+    $ref: "./components/parameters.yaml"
+  requestBodies:
+    $ref: "./components/requestBodies.yaml"
+  responses:
+    $ref: "./components/responses.yaml"
+  schemas:
+    $ref: "./components/schemas.yaml"

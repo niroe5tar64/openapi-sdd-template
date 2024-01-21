@@ -1,0 +1,10 @@
+# 500_internal_server_error
+description: Internal Server Error
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        message:
+          type: string
+          example: エラー

@@ -1,0 +1,65 @@
+# src/components/responses/swagger_sample_response.yaml
+SampleResponse:
+  description: "Success (JSONレスポンス: SwaggerSample情報)"
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          sample:
+            $ref: "../schemas.yaml#/SampleObject"
+
+SampleListResponse:
+  description: "Success (JSONレスポンス: SwaggerSample一覧)"
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          samples:
+            type: array
+            items:
+              $ref: "../schemas.yaml#/SampleObject"
+          meta:
+            $ref: "../schemas.yaml#/PaginationMetaObject"
+
+SampleCreationResponse:
+  description: "Success (JSONレスポンス: 新規登録情報)"
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          sample:
+            $ref: "../schemas.yaml#/SampleObject"
+
+SampleEditingResponse:
+  description: "Success (JSONレスポンス: 更新情報)"
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          sample:
+            $ref: "../schemas.yaml#/SampleObject"
+
+SampleDeleteResponse:
+  description: "Success (JSONレスポンス: 削除完了メッセージ)"
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          message:
+            type: string
+            example: 削除成功
+
+SampleFlagOnResponse:
+  description: "Success (JSONレスポンス: 更新情報)"
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          sample:
+            $ref: "../schemas.yaml#/SampleObject"

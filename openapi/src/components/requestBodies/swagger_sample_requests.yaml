@@ -1,0 +1,28 @@
+# src/components/requestBodies/swagger_sample_requests.yaml
+SampleCreationRequest:
+  required: true
+  description: "JSONリクエスト: Sampleの新規追加"
+  content:
+    application/json:
+      schema:
+        $ref: "#/SampleRequestObject"
+
+SampleEditingRequest:
+  required: true
+  description: "JSONリクエスト: Sampleの変更"
+  content:
+    application/json:
+      schema:
+        $ref: "#/SampleRequestObject"
+
+SampleRequestObject:
+  type: object
+  required:
+    - param_string
+  properties:
+    param_string:
+      type: string
+      example: exsample for some string parameter
+    param_boolean:
+      type: boolean
+      default: false

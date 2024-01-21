@@ -1,0 +1,96 @@
+# src/paths/swagger_sample.yaml
+
+# /swagger/sample#get
+get_swagger_sample:
+  summary: SwaggerSample一覧取得API
+  tags:
+    - /swagger/sample/*
+  description: SwaggerSampleの一覧を取得する。
+  parameters:
+    - $ref: "../components/parameters.yaml#/RequiredQueryPageIndex"
+    - $ref: "../components/parameters.yaml#/OptionalQueryMaxPerPage"
+  responses:
+    200:
+      $ref: "../components/responses.yaml#/SampleListResponse"
+    404:
+      $ref: "../components/responses.yaml#/404_not_found"
+
+# /swagger/sample#post
+post_swagger_sample:
+  summary: SwaggerSample登録API
+  tags:
+    - "/swagger/sample/*"
+  description: SwaggerSample情報を新規登録する。
+  requestBody:
+    $ref: "../components/requestBodies.yaml#/SampleCreationRequest"
+  responses:
+    201:
+      $ref: "../components/responses.yaml#/SampleCreationResponse"
+    404:
+      $ref: "../components/responses.yaml#/404_not_found"
+    500:
+      $ref: "../components/responses.yaml#/500_internal_server_error"
+
+# /swagger/sample/{id}#get
+get_swagger_sample_{id}:
+  summary: SwaggerSample情報取得API
+  tags:
+    - "/swagger/sample/*"
+  description: 指定したIDのSwaggerSample情報を取得する。
+  parameters:
+    - $ref: "../components/parameters.yaml#/RequiredPathId"
+  responses:
+    200:
+      $ref: "../components/responses.yaml#/SampleResponse"
+    404:
+      $ref: "../components/responses.yaml#/404_not_found"
+
+# /swagger/sample/{id}#patch
+patch_swagger_sample_{id}:
+  summary: SwaggerSample更新API
+  tags:
+    - "/swagger/sample/*"
+  description: 指定したIDのSwaggerSample情報を更新する。
+  parameters:
+    - $ref: "../components/parameters.yaml#/RequiredPathId"
+  requestBody:
+    $ref: "../components/requestBodies.yaml#/SampleEditingRequest"
+  responses:
+    200:
+      $ref: "../components/responses.yaml#/SampleEditingResponse"
+    404:
+      $ref: "../components/responses.yaml#/404_not_found"
+    500:
+      $ref: "../components/responses.yaml#/500_internal_server_error"
+
+# /swagger/sample/{id}#delete
+delete_swagger_sample_{id}:
+  summary: SwaggerSample削除API
+  tags:
+    - "/swagger/sample/*"
+  description: 指定したIDのSwaggerSample情報を削除する。
+  parameters:
+    - $ref: "../components/parameters.yaml#/RequiredPathId"
+  responses:
+    200:
+      $ref: "../components/responses.yaml#/SampleDeleteResponse"
+    404:
+      $ref: "../components/responses.yaml#/404_not_found"
+    500:
+      $ref: "../components/responses.yaml#/500_internal_server_error"
+
+# swagger/sample/{id}/flag_on#put
+put_swagger_sample_{id}_flag_on:
+  summary: SwaggerSample.param_booleanフラグ更新API
+  tags:
+    - "/swagger/sample/*"
+  description: 指定したIDのSwaggerSampleのparam_booleanフラグをtureに更新する。
+  parameters:
+    - $ref: "../components/parameters.yaml#/RequiredPathId"
+  responses:
+    200:
+      $ref: "../components/responses.yaml#/SampleFlagOnResponse"
+    404:
+      $ref: "../components/responses.yaml#/404_not_found"
+    500:
+      $ref: "../components/responses.yaml#/500_internal_server_error"

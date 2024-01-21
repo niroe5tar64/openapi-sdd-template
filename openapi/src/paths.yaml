@@ -1,0 +1,19 @@
+# src/paths.yaml
+
+swagger_sample:
+  get:
+    $ref: "./paths/swagger_sample.yaml#/get_swagger_sample"
+  post:
+    $ref: "./paths/swagger_sample.yaml#/post_swagger_sample"
+
+swagger_sample_{id}:
+  get:
+    $ref: "./paths/swagger_sample.yaml#/get_swagger_sample_{id}"
+  patch:
+    $ref: "./paths/swagger_sample.yaml#/patch_swagger_sample_{id}"
+  delete:
+    $ref: "./paths/swagger_sample.yaml#/delete_swagger_sample_{id}"
+
+swagger_sample_{id}_flag_on:
+  put:
+    $ref: "./paths/swagger_sample.yaml#/put_swagger_sample_{id}_flag_on"

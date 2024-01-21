@@ -1,0 +1,10 @@
+# 404_not_found
+description: Not Found
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        message:
+          type: string
+          example: お探しのページが見つかりません

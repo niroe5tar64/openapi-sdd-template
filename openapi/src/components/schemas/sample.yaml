@@ -1,0 +1,19 @@
+SampleObject:
+  type: object
+  required:
+    - id
+    - created_at
+    - updated_at
+  properties:
+    id:
+      $ref: "../schemas.yaml#/IDValue"
+    param_string:
+      type: string
+      example: exsample for some string parameter
+    param_boolean:
+      type: boolean
+      default: false
+    created_at:
+      $ref: "../schemas.yaml#/CreatedAtValue"
+    updated_at:
+      $ref: "../schemas.yaml#/UpdatedAtValue"

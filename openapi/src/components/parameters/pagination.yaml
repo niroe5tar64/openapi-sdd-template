@@ -1,0 +1,16 @@
+# src/component/parameters/pagination.yaml
+RequiredQueryPageIndex:
+  name: page_index
+  in: query
+  required: true
+  schema:
+    type: integer
+    example: 1
+  description: "ページング用: offset（ページ取得位置）"
+OptionalQueryMaxPerPage:
+  name: max_per_page
+  in: query
+  schema:
+    type: integer
+    example: 20
+  description: "ページング用: limit（取得件数）"
