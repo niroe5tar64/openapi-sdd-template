@@ -2,9 +2,18 @@
   "name": "openapi-sdd-template",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "openapi:bundle": "swagger-cli bundle -r openapi/src/index.yaml -o build/openapi.json",
+    "openapi:generate": "bunx @redocly/cli build-docs build/openapi.json -o build/redoc-static.html",
+    "openapi:mock": "bunx prism mock -h localhost -p 3000 build/openapi.json"
+  },
   "devDependencies": {
+    "@redocly/cli": "^1.6.0",
+    "@stoplight/prism-cli": "^5.5.3",
     "@types/bun": "latest",
-    "prettier": "^3.2.4"
+    "prettier": "^3.2.4",
+    "prism": "^4.1.2",
+    "swagger-cli": "^4.0.4"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
