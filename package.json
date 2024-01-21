@@ -5,8 +5,8 @@
   "scripts": {
     "openapi:bundle": "swagger-cli bundle -r openapi/src/index.yaml -o build/openapi.json",
     "openapi:generate": "bunx @redocly/cli build-docs build/openapi.json -o build/redoc-static.html",
-    "openapi:mock": "bunx prism mock -h localhost -p 3000 build/openapi.json",
-    "openapi:output-schema": "bunx openapi-typescript build/openapi.json --output build/schema.ts"
+    "build-schema": "bunx openapi-typescript build/openapi.json --output build/schema.ts",
+    "mock-server": "bunx prism mock -h localhost -p 3000 build/openapi.json"
   },
   "devDependencies": {
     "@redocly/cli": "^1.6.0",
