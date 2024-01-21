@@ -3,10 +3,10 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "openapi:bundle": "swagger-cli bundle -r openapi/src/index.yaml -o build/openapi.json",
-    "openapi:generate": "bunx @redocly/cli build-docs build/openapi.json -o build/redoc-static.html",
-    "build-schema": "bunx openapi-typescript build/openapi.json --output build/schema.ts",
-    "mock-server": "bunx prism mock -h localhost -p 3000 build/openapi.json"
+    "openapi:bundle": "swagger-cli bundle -r openapi/src/index.yaml ---type=json -o export/openapi.json",
+    "openapi:generate": "bunx @redocly/cli build-docs export/openapi.json --output export/redoc-static.html",
+    "build-schema": "bunx openapi-typescript export/openapi.json --output export/schema.ts",
+    "mock-server": "bunx prism mock -h localhost -p 3000 export/openapi.json"
   },
   "devDependencies": {
     "@redocly/cli": "^1.6.0",
